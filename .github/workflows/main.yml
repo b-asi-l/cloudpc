@@ -1,6 +1,3 @@
-        New-Item -ItemType Directory -Force -Path "D:\storage" | Out-Null
-
-      # ─────────────────────────────────────────────
       # 2. INSTALAR MESA3D (OpenGL SOFTWARE RENDERER)
       # ─────────────────────────────────────────────
       - name: Install Mesa3D OpenGL (Software GPU)
@@ -309,7 +306,7 @@
             Write-Host "[$(Get-Date -Format 'HH:mm:ss')] Session active — tick $i" -ForegroundColor DarkGray
             Get-PSDrive -PSProvider FileSystem | Select-Object Name,
               @{N='Free(GB)';E={[math]::Round($_.Free/1GB,1)}} | Format-Table -AutoSize
-            Start-Sleep -Seconds 300
-            Start-Sleep -Seconds 60
+            Start-Sleep -Seconds 300            Start-Sleep -Seconds 300
+            Start-Sleep -Seconds 60            Start-Sleep -Seconds 60
             Write-Host "Keep-alive tick: $(Get-Date -Format 'HH:mm:ss')" -ForegroundColor DarkGray
           }
